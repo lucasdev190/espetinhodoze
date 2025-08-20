@@ -20,11 +20,11 @@
       line-height: 1.6;
     }
     header {
-      background: url('esp1.jpg') no-repeat center center/cover;
-      height: 300px;
+      height: 200px; /* Ajustado para não precisar de uma imagem de fundo */
       display: flex;
       align-items: center;
       justify-content: center;
+      background-color: #333; /* Cor de fundo alternativa */
       text-shadow: 2px 2px 5px black;
     }
     header h1 {
@@ -222,14 +222,3 @@
 
     function showSection(id) {
       const sections = document.querySelectorAll('.section');
-      sections.forEach(section => section.classList.remove('active'));
-      document.getElementById(id).classList.add('active');
-    }
-
-    // Abrir diretamente a seção de Espetos no carregamento
-    window.onload = () => {
-      showSection('espetos');
-    };
-  </script>
-</body>
-</html>
