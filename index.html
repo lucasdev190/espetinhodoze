@@ -20,11 +20,11 @@
       line-height: 1.6;
     }
     header {
-      height: 200px; /* Ajustado para não precisar de uma imagem de fundo */
+      height: 200px;
       display: flex;
       align-items: center;
       justify-content: center;
-      background-color: #333; /* Cor de fundo alternativa */
+      background-color: #333;
       text-shadow: 2px 2px 5px black;
     }
     header h1 {
@@ -116,11 +116,11 @@
   </header>
 
   <nav>
-    <a onclick="showSection('espetos')">Espetos</a>
-    <a onclick="showSection('caldos')">Caldos</a>
-    <a onclick="showSection('bebidas')">Bebidas</a>
-    <a onclick="showSection('doses')">Doses</a>
-    <a onclick="showSection('contato')">Contato</a>
+    <a href="javascript:void(0)" onclick="showSection('espetos')">Espetos</a>
+    <a href="javascript:void(0)" onclick="showSection('caldos')">Caldos</a>
+    <a href="javascript:void(0)" onclick="showSection('bebidas')">Bebidas</a>
+    <a href="javascript:void(0)" onclick="showSection('doses')">Doses</a>
+    <a href="javascript:void(0)" onclick="showSection('contato')">Contato</a>
   </nav>
 
   <div class="content">
@@ -221,8 +221,11 @@
     }
 
     function showSection(id) {
+      // Remove a classe "active" de todas as seções
       const sections = document.querySelectorAll('.section');
       sections.forEach(section => section.classList.remove('active'));
+
+      // Adiciona a classe "active" à seção selecionada
       document.getElementById(id).classList.add('active');
     }
 
